@@ -1,0 +1,28 @@
+<!-- Rocket launch countdown -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 10px;
+        background: #f5f9fa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="output"></div>
+  </body>
+  <script>
+    const output = document.querySelector(".output");
+    for (let i = 10; i > -1; i--) {
+      const para = document.createElement("p");
+      output.appendChild(para);
+      if (i == 10) para.textContent = `Countdown to ${i}`;
+      else if (i == 0) para.textContent = "Blast he he ha ha!!!";
+      else para.textContent = i;
+    }
+  </script>
+</html>
